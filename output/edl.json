@@ -1,0 +1,207 @@
+{
+ "fps": 25,
+ "size": [
+  1080,
+  1920
+ ],
+ "talk_duration": 32.29,
+ "end_card": 2.2,
+ "total": 34.49,
+ "items": [
+  {
+   "section": "HOOK",
+   "file": "hook",
+   "src": "C6986",
+   "src_in": 3.6,
+   "src_out": 6.81,
+   "t_in": 0.0,
+   "t_out": 3.21,
+   "face": [
+    0.386,
+    0.446,
+    0.107
+   ],
+   "cut_index": 0,
+   "scale": 1.0
+  },
+  {
+   "section": "HOOK",
+   "file": "hook",
+   "src": "C6986",
+   "src_in": 7.09,
+   "src_out": 11.41,
+   "t_in": 3.21,
+   "t_out": 7.53,
+   "face": [
+    0.43,
+    0.45,
+    0.075
+   ],
+   "cut_index": 1,
+   "scale": 1.2
+  },
+  {
+   "section": "BODY1_line1",
+   "file": "body 1",
+   "src": "C6963",
+   "src_in": 23.09,
+   "src_out": 26.69,
+   "t_in": 7.53,
+   "t_out": 11.13,
+   "face": [
+    0.429,
+    0.372,
+    0.093
+   ],
+   "cut_index": 0,
+   "scale": 1.0
+  },
+  {
+   "section": "BODY1_line1",
+   "file": "body 1",
+   "src": "C6963",
+   "src_in": 26.97,
+   "src_out": 31.15,
+   "t_in": 11.13,
+   "t_out": 15.31,
+   "face": [
+    0.426,
+    0.374,
+    0.094
+   ],
+   "cut_index": 1,
+   "scale": 1.2
+  },
+  {
+   "section": "BODY1_line2",
+   "file": "body 1",
+   "src": "C6963",
+   "src_in": 91.43,
+   "src_out": 96.75,
+   "t_in": 15.31,
+   "t_out": 20.63,
+   "face": [
+    0.444,
+    0.377,
+    0.097
+   ],
+   "cut_index": 0,
+   "scale": 1.08
+  },
+  {
+   "section": "BODY2",
+   "file": "body 2",
+   "src": "C6970",
+   "src_in": 0.73,
+   "src_out": 3.89,
+   "t_in": 20.63,
+   "t_out": 23.79,
+   "face": [
+    0.414,
+    0.41,
+    0.066
+   ],
+   "cut_index": 0,
+   "scale": 1.0
+  },
+  {
+   "section": "BODY2",
+   "file": "body 2",
+   "src": "C6970",
+   "src_in": 4.57,
+   "src_out": 6.41,
+   "t_in": 23.79,
+   "t_out": 25.63,
+   "face": [
+    0.436,
+    0.419,
+    0.059
+   ],
+   "cut_index": 1,
+   "scale": 1.2
+  },
+  {
+   "section": "BODY2",
+   "file": "body 2",
+   "src": "C6970",
+   "src_in": 8.49,
+   "src_out": 11.73,
+   "t_in": 25.63,
+   "t_out": 28.87,
+   "face": [
+    0.463,
+    0.412,
+    0.094
+   ],
+   "cut_index": 2,
+   "scale": 1.08
+  },
+  {
+   "section": "CTA",
+   "file": "cta",
+   "src": "C7014",
+   "src_in": 2.3,
+   "src_out": 4.99,
+   "t_in": 28.87,
+   "t_out": 31.56,
+   "face": [
+    0.48,
+    0.468,
+    0.081
+   ],
+   "cut_index": 0,
+   "scale": 1.0
+  },
+  {
+   "section": "CTA",
+   "file": "cta",
+   "src": "C7014",
+   "src_in": 5.51,
+   "src_out": 6.24,
+   "t_in": 31.56,
+   "t_out": 32.29,
+   "face": [
+    0.48,
+    0.468,
+    0.081
+   ],
+   "cut_index": 1,
+   "scale": 1.2
+  }
+ ],
+ "broll": [
+  {
+   "src": "C6986",
+   "src_in": 0.1,
+   "dur": 1.6,
+   "t_in": 10.13,
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "zoom": [
+    1.1,
+    1.02
+   ]
+  },
+  {
+   "src": "C6986",
+   "src_in": 1.8,
+   "dur": 1.4,
+   "t_in": 13.53,
+   "focus": [
+    0.45,
+    0.3
+   ],
+   "zoom": [
+    1.0,
+    1.08
+   ]
+  }
+ ],
+ "hook_text": [
+  "CUTI SEKOLAH,",
+  "ANAK BUAT APA?"
+ ],
+ "notes": "Takes: body1 line1 = 2nd take (23.0s), line2 = 3rd/final take (91.1s); repeat takes, crew cues and pauses >0.25s removed."
+}
