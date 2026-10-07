@@ -1,49 +1,57 @@
-# Shotlist (DRAF) — Promo "Program Cuti Sekolah" Minda Optima
+# Shotlist (SEMAKAN) — Promo "Program Cuti Sekolah" Minda Optima
 
-**Format:** menegak 9:16 (1080×1920), 30 fps · **Panjang:** ±45 saat · **Platform:** TikTok / Reels
-**Mood:** ceria, laju · **Lagu:** bebas royalti, ±120 BPM (potongan ikut rentak, setiap ~2 bar)
+**Format:** menegak 9:16 (1080×1920), 30 fps · **Panjang:** ±40 saat · **Platform:** TikTok / Reels
+**Mood:** ceria, laju · potongan ikut beat (~120 BPM)
+Shotlist ini disusun selepas menonton semua 6 klip (lembaran rujukan ada dalam `preview/`).
 
-> ⚠️ Draf ini disusun **sebelum saya dapat menonton klip** (muat turun dari Google Drive disekat oleh rangkaian sesi ini).
-> Pemetaan klip di bawah hanya ikut urutan rakaman dalam folder. Selepas klip boleh dimuat turun, saya akan
-> tonton setiap klip, pilih saat terbaik (timestamp sebenar) dan kemas kini shotlist ini sebelum render.
+## Apa yang ada dalam klip
 
-## Klip sumber (folder Drive)
+Semua klip ialah **seorang pengacara** (vest biru-merah, tudung oren) bercakap kepada kamera di taman/padang permainan kampus. **Tiada kanak-kanak atau aktiviti** dalam rakaman, jadi teks di bawah tidak menunjukkan aktiviti yang tak ada. Klip pendek yang paling "ceria" dan sesuai untuk potongan laju ialah klip yang dia mengintai (C7014, C7016), jalan ke kamera dan buat tanda peace (C6967, C6970).
 
-| Klip | Saiz | Masa rakam (22 Feb 2024) | Catatan |
+| Klip | Panjang | Isi | Bahagian terbaik |
 |---|---|---|---|
-| C6963.MP4 | 675 MB | 10:26 | Klip paling panjang — kemungkinan rakaman aktiviti utama |
-| C6967.MP4 | 92 MB | 10:29 | |
-| C6970.MP4 | 84 MB | 10:32 | |
-| C6986.MP4 | 96 MB | 11:00 | |
-| C7014.MP4 | 42 MB | 11:29 | |
-| C7016.MP4 | 42 MB | 11:31 | |
+| C6963 | 1:42 | Shot tetap, bercakap, dinding kaca di belakang | 0:00–0:03 tangan didepa menyambut; 1:24–1:28 gerak tangan bersemangat |
+| C6967 | 0:14 | Berjalan ke kamera, tanda peace | 0:00–0:05 berjalan; 0:11–0:14 peace close-up. **Elak 0:05–0:10** (lelaki lalu) |
+| C6970 | 0:12 | Bercakap, tunjuk jari | 0:00–0:03.8; 0:09.4–0:12 peace close-up. **Elak 0:04–0:09** (lelaki dengan telefon) |
+| C6986 | 0:14 | Sudut tinggi, lantai getah berwarna-warni, dia masuk dan mendongak | 0:03–0:09 |
+| C7014 | 0:06 | Muncul dalam lubang bulat dinding kuning | 0:02.4–0:05.2 |
+| C7016 | 0:06 | Mengintai di sebalik tiang konkrit | 0:00.6–0:03.6 |
 
 ## Shotlist
 
-| # | Masa | Klip | Visual (dicadangkan) | Teks atas skrin | Transisi |
-|---|---|---|---|---|---|
-| 1 | 0:00–0:03 | C6963 | **Hook** — momen paling bertenaga (gelak / sorak / aksi) | **CUTI SEKOLAH DAH DEKAT!** | Zoom-in punch pada beat pertama |
-| 2 | 0:03–0:09 | C6967 | Kanak-kanak mula aktiviti | Anak bosan duduk rumah? | Potong ikut beat |
-| 3 | 0:09–0:16 | C6970 | Suasana kumpulan / kelas | Jom sertai **PROGRAM CUTI SEKOLAH Minda Optima!** | Whip / slide |
-| 4 | 0:16–0:24 | C6986 | Aktiviti hands-on, close-up muka gembira | ✔ Belajar sambil bermain<br>✔ Aktiviti seronok & bermanfaat | Potong ikut beat |
-| 5 | 0:24–0:31 | C7014 | Kerja berkumpulan / bimbingan fasilitator | ✔ Kawan baru<br>✔ Dibimbing fasilitator berpengalaman | Potong ikut beat |
-| 6 | 0:31–0:37 | C7016 | Penutup — lambai / sorak ke kamera | **Tempat terhad!** | Flash putih ringkas |
-| 7 | 0:37–0:45 | — (latar warna jenama + klip kabur) | **Kad akhir** | `[LOGO]`<br>📅 `[TARIKH PROGRAM]`<br>📲 WhatsApp `[01X-XXX XXXX]`<br>**DAFTAR SEKARANG!** | Lagu fade-out 1.5 s |
+| # | Masa dalam video | Klip & bahagian | Teks atas skrin | Transisi |
+|---|---|---|---|---|
+| 1 | 0:00–0:03.5 | C6963 0:00–0:03.5 (tangan didepa) | **CUTI SEKOLAH DAH DEKAT!** | Zoom punch pada beat pertama |
+| 2 | 0:03.5–0:06.3 | C7014 0:02.4–0:05.2 (muncul di lubang) | Anak bosan duduk rumah? | Potong ikut beat |
+| 3 | 0:06.3–0:09.3 | C7016 0:00.6–0:03.6 (mengintai tiang) | Jom isi cuti dengan seronok! | Potong ikut beat |
+| 4 | 0:09.3–0:15.3 | C6986 0:03–0:09 (sudut tinggi, warna-warni) | **PROGRAM CUTI SEKOLAH**<br>Minda Optima | Slide pantas |
+| 5 | 0:15.3–0:19.1 | C6970 0:00–0:03.8 | `[CIRI-CIRI 1]` | Potong ikut beat |
+| 6 | 0:19.1–0:21.7 | C6970 0:09.4–0:12 (peace) | `[CIRI-CIRI 2]` | Potong ikut beat |
+| 7 | 0:21.7–0:26.7 | C6967 0:00–0:05 (jalan ke kamera) | `[CIRI-CIRI 3]` | Potong ikut beat |
+| 8 | 0:26.7–0:29.6 | C6967 0:11–0:13.9 (peace close-up) | **Tempat terhad!** | Flash putih |
+| 9 | 0:29.6–0:33.6 | C6963 1:24–1:28 (gerak tangan) | Jom sertai kami! | Potong ikut beat |
+| 10 | 0:33.6–0:40 | Kad akhir (latar jenama, klip kabur) | `[LOGO]`<br>📅 `[TARIKH PROGRAM]`<br>📲 WhatsApp `[01X-XXX XXXX]`<br>**DAFTAR SEKARANG!** | Lagu fade-out 1.5 s |
 
-**Placeholder** (mudah dicari & diganti di CapCut): `[LOGO]`, `[TARIKH PROGRAM]`, `[01X-XXX XXXX]`.
-Logo juga muncul kecil di penjuru atas sepanjang video (watermark).
+**Placeholder** untuk diganti di CapCut: `[LOGO]`, `[TARIKH PROGRAM]`, `[01X-XXX XXXX]`, `[CIRI-CIRI 1–3]`.
+Logo kecil juga di penjuru atas sepanjang video.
 
-## Fail untuk CapCut (akan disediakan bersama render)
+## Perlu anda putuskan sebelum render
+
+1. **Suara pengacara:** Suara asal dalam klip akan **dimutekan** dan diganti muzik, kecuali anda mahu suaranya dikekalkan di klip #1 (muzik direndahkan). Saya tak dapat dengar apa yang dia cakap, jadi tak boleh tulis sari kata daripadanya.
+2. **Ciri-ciri program** (#5–#7): Berikan 3 isi sebenar (contoh: umur, jenis aktiviti, tempoh, lokasi). Saya tak mahu reka isi program yang mungkin salah. Jika tiada, saya letak placeholder sahaja.
+3. **Lagu:** Domain muzik percuma disekat di sesi ini. Pilihan: (a) saya jana lagu ceria **asal** dengan kod, bebas royalti, kualiti ringkas; (b) jana melalui Higgsfield (guna kredit); (c) anda beri fail lagu bebas royalti.
+
+## Fail untuk CapCut (disediakan bersama render)
 
 ```
 program-cuti-sekolah/
-├── final/promo_cuti_sekolah_9x16.mp4      ← video siap
+├── final/promo_cuti_sekolah_9x16.mp4
 └── capcut/
-    ├── 01_klip ... 06_klip.mp4             ← klip dipotong & di-crop 9:16 (tiada teks)
-    ├── overlay_01 ... overlay_07.png       ← teks lutsinar (boleh buang & taip semula di CapCut)
-    ├── kad_akhir_latar.png                 ← kad akhir tanpa teks
-    ├── logo_placeholder.png                ← ganti dengan logo sebenar
-    ├── muzik.mp3                           ← lagu + sumber/lesen
-    ├── teks.srt                            ← semua teks ikut masa
-    └── PANDUAN_CAPCUT.md                   ← susunan lapisan & masa
+    ├── 01..09_klip.mp4        ← klip dipotong 9:16, tiada teks, audio asal dibuang
+    ├── overlay_01..10.png     ← teks lutsinar
+    ├── kad_akhir_latar.png
+    ├── logo_placeholder.png
+    ├── muzik.mp3  (+ nota lesen)
+    ├── teks.srt
+    └── PANDUAN_CAPCUT.md      ← susunan lapisan & masa
 ```
