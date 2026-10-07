@@ -1,0 +1,110 @@
+{
+ "C6963": {
+  "coded": "1920x1080",
+  "rotation": -90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 102.24,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 52.8,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    102.0
+   ]
+  ],
+  "peak_rms_db": -9.1
+ },
+ "C6967": {
+  "coded": "1920x1080",
+  "rotation": 90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 13.92,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 53.0,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    13.5
+   ]
+  ],
+  "peak_rms_db": -9.2
+ },
+ "C6970": {
+  "coded": "1920x1080",
+  "rotation": 90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 12.48,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 53.8,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    12.0
+   ]
+  ],
+  "peak_rms_db": -9.8
+ },
+ "C6986": {
+  "coded": "1920x1080",
+  "rotation": 90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 13.92,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 55.4,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    13.5
+   ]
+  ],
+  "peak_rms_db": -9.8
+ },
+ "C7014": {
+  "coded": "1920x1080",
+  "rotation": 90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 6.24,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 53.8,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    6.0
+   ]
+  ],
+  "peak_rms_db": -9.9
+ },
+ "C7016": {
+  "coded": "1920x1080",
+  "rotation": 90,
+  "display": "1080x1920",
+  "fps": "50/1",
+  "duration": 5.76,
+  "codec": "h264",
+  "pix_fmt": "yuv420p",
+  "bitrate_mbps": 58.3,
+  "audio": "pcm_s16be",
+  "active_audio_ranges_s": [
+   [
+    0.0,
+    5.5
+   ]
+  ],
+  "peak_rms_db": -10.0
+ }
+}

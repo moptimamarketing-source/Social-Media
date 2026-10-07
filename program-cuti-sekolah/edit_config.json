@@ -1,0 +1,90 @@
+{
+  "_nota": "Sumber kebenaran untuk video. Ubah nilai di sini, kemudian jalankan: python tools/build_video.py. Masa 'ss' dan 'dur' ialah saat dalam klip sumber; masa video dikira automatik (dur / speed).",
+  "output": {
+    "width": 1080, "height": 1920, "fps": 30,
+    "crf": 18, "preset": "slow", "audio_bitrate": "192k",
+    "loudness_lufs": -14, "true_peak_db": -1.5,
+    "fade_in_s": 0.5, "fade_out_s": 1.0,
+    "file_9x16": "output/program_cuti_sekolah_9x16.mp4",
+    "file_9x16_no_text": "output/program_cuti_sekolah_9x16_TANPA_TEKS.mp4",
+    "file_16x9": "output/program_cuti_sekolah_16x9.mp4"
+  },
+  "safe_zone_px": {"top": 150, "bottom": 250, "left": 60, "right": 120},
+  "palette": {
+    "kuning": "#FFC93C", "biru": "#2F6FED", "oren": "#FF7A1A",
+    "putih": "#FFFFFF", "gelap": "#12204A"
+  },
+  "fonts": {
+    "tajuk": "capcut/fonts/Baloo2-ExtraBold.ttf",
+    "sub": "capcut/fonts/Poppins-SemiBold.ttf",
+    "tebal": "capcut/fonts/Poppins-ExtraBold.ttf"
+  },
+  "grade": {
+    "_nota": "Sama untuk semua klip; 'override' pada shot untuk selaraskan warna.",
+    "brightness": 0.03, "contrast": 1.05, "saturation": 1.13, "gamma": 1.0,
+    "warm": {"rs": 0.03, "rm": 0.03, "rh": 0.02, "bs": -0.03, "bm": -0.03, "bh": -0.02}
+  },
+  "grade_overrides": {"C6986": {"saturation": 1.04, "brightness": 0.02}, "C7014": {"saturation": 1.02, "brightness": 0.015}, "C6963": {"saturation": 1.15}},
+  "stabilise": {"mode": "auto", "shake_threshold_px": 0.9, "smoothing": 12, "zoom_pct": 3},
+  "transitions": {
+    "after_hook":   {"type": "smoothleft", "dur": 0.3},
+    "into_emotion": {"type": "slideleft", "dur": 0.25},
+    "before_cta":   {"type": "fadewhite", "dur": 0.4}
+  },
+  "music": {
+    "file": "music/minda_cuti_ceria.wav", "bpm": 120, "bars": 28,
+    "sumber": "Lagu asal dijana dengan kod (tools/make_music.py). Tiada sampel pihak ketiga. Lihat music/LESEN.md"
+  },
+  "shots": [
+    {"id": "01", "role": "hook",     "clip": "C6963", "ss": 1.5,  "dur": 3.0,  "zoom": [1.15, 1.25], "note": "Pengacara angkat jari & buka tangan, mesra", "score": 5, "trans_out": "after_hook"},
+    {"id": "02", "role": "intro",    "clip": "C7014", "ss": 2.5,  "dur": 2.5,  "zoom": [1.0, 1.08],  "note": "Muncul di lubang bulat dinding kuning", "score": 5},
+    {"id": "03", "role": "intro",    "clip": "C7016", "ss": 0.5,  "dur": 2.5,  "zoom": [1.05, 1.10], "note": "Mengintai di sebalik tiang", "score": 4},
+    {"id": "04", "role": "intro",    "clip": "C6986", "ss": 3.0,  "dur": 2.0,  "zoom": [1.0, 1.08],  "note": "Sudut tinggi, lantai getah berwarna-warni", "score": 4},
+    {"id": "05", "role": "montaj",   "clip": "C6967", "ss": 0.0,  "dur": 3.0,  "zoom": [1.0, 1.06],  "note": "Berjalan ke kamera, shot lebar", "score": 4},
+    {"id": "06", "role": "montaj",   "clip": "C6963", "ss": 24.0, "dur": 2.5,  "zoom": [1.45, 1.55], "note": "Close-up, tangan dibuka", "score": 4},
+    {"id": "07", "role": "montaj",   "clip": "C6986", "ss": 5.5,  "dur": 2.5,  "zoom": [1.25, 1.33], "note": "Mendongak sambil bercakap", "score": 4},
+    {"id": "08", "role": "montaj",   "clip": "C6970", "ss": 0.0,  "dur": 2.0,  "zoom": [1.0, 1.06],  "note": "Shot lebar, bercakap; potong sebelum lelaki masuk (4.0s)", "score": 3},
+    {"id": "09", "role": "montaj",   "clip": "C6963", "ss": 47.0, "dur": 2.5,  "zoom": [1.35, 1.45], "note": "Close-up, tangan didepa & senyum", "score": 5},
+    {"id": "10", "role": "montaj",   "clip": "C6967", "ss": 3.0,  "dur": 2.0,  "zoom": [1.0, 1.08],  "note": "Tanda peace sambil menghampiri; potong sebelum lelaki masuk (5.0s)", "score": 5},
+    {"id": "11", "role": "montaj",   "clip": "C6986", "ss": 8.0,  "dur": 2.5,  "zoom": [1.0, 1.08],  "note": "Gerak tangan, lantai warna-warni", "score": 3},
+    {"id": "12", "role": "montaj",   "clip": "C6970", "ss": 2.0,  "dur": 1.5,  "zoom": [1.0, 1.06],  "note": "Tunjuk dua jari", "score": 3},
+    {"id": "13", "role": "montaj",   "clip": "C6963", "ss": 59.5, "dur": 2.5,  "zoom": [1.0, 1.08],  "note": "Pusing ke sisi (candid), shot lebar", "score": 3},
+    {"id": "14", "role": "montaj",   "clip": "C6970", "ss": 8.0,  "dur": 1.5,  "zoom": [1.0, 1.06],  "note": "Bercakap dengan gerak tangan; lelaki sudah keluar", "score": 3},
+    {"id": "15", "role": "montaj",   "clip": "C6963", "ss": 83.0, "dur": 2.5,  "zoom": [1.5, 1.6],   "note": "Close-up, gerak tangan bersemangat", "score": 4},
+    {"id": "16", "role": "montaj",   "clip": "C6986", "ss": 10.5, "dur": 3.0,  "zoom": [1.35, 1.43], "note": "Senyum mendongak ke kamera", "score": 4, "trans_out": "into_emotion"},
+    {"id": "17", "role": "emosi",    "clip": "C6967", "ss": 11.0, "dur": 2.45, "zoom": [1.0, 1.06],  "speed": 0.7, "note": "Peace sign besar + senyum, slow-mo 0.7x (50fps cukup)", "score": 5},
+    {"id": "18", "role": "emosi",    "clip": "C6970", "ss": 9.5,  "dur": 2.45, "zoom": [1.0, 1.06],  "speed": 0.7, "note": "Peace sign close-up, slow-mo 0.7x", "score": 5},
+    {"id": "19", "role": "emosi",    "clip": "C6963", "ss": 94.4, "dur": 2.8,  "zoom": [1.3, 1.38],  "speed": 0.7, "note": "Tangan didepa, senyum hangat, slow-mo 0.7x", "score": 4, "trans_out": "before_cta"},
+    {"id": "20", "role": "cta",      "clip": "C6967", "freeze_at": 13.3, "dur": 7.0, "zoom": [1.0, 1.06], "note": "Freeze-frame peace sign, kabur + tint biru sebagai latar kad penutup", "score": 5}
+  ],
+  "dibuang": [
+    {"clip": "C6967", "range": "5.0–10.0",  "sebab": "lelaki lalu di belakang"},
+    {"clip": "C6970", "range": "4.0–7.5",   "sebab": "lelaki dengan telefon masuk/keluar bingkai"},
+    {"clip": "C6986", "range": "0.0–3.0",   "sebab": "lantai kosong, pengacara belum masuk"},
+    {"clip": "C7014", "range": "0.0–2.4 & 5.0–6.2", "sebab": "lubang kosong"},
+    {"clip": "C7016", "range": "3.5–5.8",   "sebab": "pengacara sudah keluar bingkai"},
+    {"clip": "C6963", "range": "selebihnya (±80 saat)", "sebab": "pengacara berdiri tenang bercakap; ulang bingkai yang sama"}
+  ],
+  "texts": [
+    {"id": "T01_hook", "kind": "stack", "t": [0.25, 2.85], "y": 1190, "anim": "pop",
+     "lines": [{"t": "CUTI SEKOLAH", "color": "putih", "size": 118}, {"t": "DAH NAK MULA!", "color": "kuning", "size": 128}]},
+    {"id": "T02_tajuk", "kind": "stack", "t": [3.35, 9.85], "y": 1290, "anim": "pop",
+     "lines": [{"t": "PROGRAM", "color": "putih", "size": 96}, {"t": "CUTI SEKOLAH", "color": "kuning", "size": 128}],
+     "pill": {"t": "Minda Optima", "fill": "biru", "color": "putih", "size": 76}},
+    {"id": "T03", "kind": "pill", "t": [10.2, 12.8], "y": 1440, "fill": "biru", "t_text": "Jom ceriakan cuti sekolah!"},
+    {"id": "T04_PLACEHOLDER", "kind": "pill", "t": [15.7, 17.8], "y": 1440, "fill": "oren", "t_text": "[AKTIVITI UTAMA]", "placeholder": true},
+    {"id": "T05", "kind": "pill", "t": [20.2, 22.3], "y": 1440, "fill": "biru", "t_text": "Jumpa team kami!"},
+    {"id": "T06", "kind": "pill", "t": [24.7, 26.8], "y": 1440, "fill": "biru", "t_text": "Ruang terbuka yang seronok"},
+    {"id": "T07", "kind": "pill", "t": [28.7, 30.8], "y": 1440, "fill": "biru", "t_text": "Jom sertai kami!"},
+    {"id": "T08_PLACEHOLDER", "kind": "pill", "t": [32.7, 34.8], "y": 1440, "fill": "oren", "t_text": "[UMUR / KUMPULAN SASARAN]", "placeholder": true},
+    {"id": "T09", "kind": "pill", "t": [35.2, 37.8], "y": 1440, "fill": "biru", "t_text": "Tak sabar nak jumpa korang!"},
+    {"id": "T10_emosi", "kind": "stack", "t": [38.35, 48.6], "y": 1230, "anim": "pop",
+     "lines": [{"t": "Cuti yang seronok,", "color": "putih", "size": 84}, {"t": "kenangan yang bermakna!", "color": "kuning", "size": 84}]},
+    {"id": "C1_logo_PLACEHOLDER", "kind": "logo", "t": [49.35, 55.8], "y": 330, "size": 300, "placeholder": true},
+    {"id": "C2_terhad", "kind": "stack", "t": [49.6, 55.8], "y": 700, "anim": "pop",
+     "lines": [{"t": "Tempat", "color": "putih", "size": 84}, {"t": "TERHAD!", "color": "kuning", "size": 150}]},
+    {"id": "C3_daftar", "kind": "pill", "t": [50.1, 55.8], "y": 1030, "fill": "oren", "t_text": "Daftar sekarang!", "size": 74},
+    {"id": "C4_whatsapp_PLACEHOLDER", "kind": "pill", "t": [50.5, 55.8], "y": 1180, "fill": "putih", "color": "gelap", "t_text": "WhatsApp: [NOMBOR WHATSAPP]", "size": 52, "placeholder": true},
+    {"id": "C5_tarikh_PLACEHOLDER", "kind": "pill", "t": [50.9, 55.8], "y": 1300, "fill": "biru", "t_text": "Tarikh: [TARIKH PROGRAM]", "size": 52, "placeholder": true}
+  ]
+}

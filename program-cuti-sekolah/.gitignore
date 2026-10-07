@@ -1,0 +1,5 @@
+raw
+.work/
+analysis/frames/
+analysis/proxy/
+__pycache__/
