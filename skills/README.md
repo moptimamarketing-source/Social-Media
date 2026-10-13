@@ -1,41 +1,58 @@
-# Skill Video — Minda Optima Marketing
+# Skill Marketing — Minda Optima
 
-## 1. `video-editing` (skill kita sendiri) — dah siap
+## A. Skill Minda Optima (dibina khas, guna di claude.ai ATAU Claude Code)
 
-| Fail | Guna untuk |
-| --- | --- |
-| `upload_zip/video-editing.zip` | Upload di **claude.ai → Customize → Skills → + → Upload a skill** |
-| `upload_zip/video-editing.skill` | Sama, tapi boleh tekan **Save skill** terus dalam chat |
-| `../.claude/skills/video-editing/` | Auto-aktif bila buka repo ni dalam **Claude Code** |
+Upload fail dalam `upload_zip/` di **claude.ai → Customize → Skills → + → Upload a skill** (atau tekan *Save skill* pada fail `.skill`). Pastikan **Code execution** ON.
 
-Panggil: taip `/video-editing` atau cakap biasa ("tolong edit video ni jadi reels").
-
-## 2. Skill video dari internet — keputusan selepas semakan (Okt 2026)
-
-| Skill | Keputusan | Sebab |
+| Skill | Guna bila | Hasil |
 | --- | --- | --- |
-| **HyperFrames** (HeyGen) — `github.com/heygen-com/hyperframes` | ✅ **Disyorkan** | Lesen Apache-2.0 (percuma, komersial OK). Ada aliran kerja yang kena dengan kerja kita: `talking-head-recut` (grafik atas video bercakap), `embedded-captions` (35 gaya caption + transkripsi lokal), `music-to-video` (video ikut beat lagu), `faceless-explainer` (video tips tanpa muka), `motion-graphics` (tajuk/logo bergerak). Diuji render 9:16 dalam sesi ni — berjaya. |
-| **Remotion** — `github.com/remotion-dev/skills` | ❌ **Jangan guna tanpa beli lesen** | Lesen Remotion: syarikat untung dengan **lebih 3 pekerja wajib beli Company License**. Minda Optima jauh lebih besar. HyperFrames buat benda yang sama, percuma. |
-| Plugin directory (ManyMotions, Video Cleanup, video-shotcraft) | ⚠️ Pilihan | Dibuat komuniti, bukan Anthropic. Tanya boss dulu. `video-shotcraft` guna Remotion → isu lesen sama. |
+| `video-editing` | Reels/TikTok, skrip video, edit fail video, potong video panjang jadi banyak reels | Skrip + shot list + brief CapCut, atau fail .mp4 siap edit |
+| `carousel-ig` | Post slide / infografik IG & FB | Slide PNG sedia upload + caption |
+| `iklan-ads` | Iklan Meta / TikTok, iklan tak convert | 3 sudut iklan + variasi A/B + diagnosis |
+| `content-planner` | Nak post apa bulan ni | Kalendar content Excel ikut pillar & pemilik |
+| `content-analytics` | Report bulanan, post mana menang | Analisis + 3 tindakan + laporan untuk boss |
 
-### Cara pasang HyperFrames di PC sendiri (Claude Code)
+Panggil dengan `/nama-skill`, atau cakap biasa.
 
-Perlu: **Node.js 22+**, **ffmpeg**, Google Chrome/Chromium.
+## B. Skill HyperFrames (HeyGen) — dalam `.claude/skills/`, Claude Code sahaja
 
+Auto-aktif bila repo ini dibuka dalam Claude Code. Lesen Apache-2.0 (salinan: `vendor-licenses/hyperframes-LICENSE`), disalin dari `github.com/heygen-com/hyperframes` commit `7c73b3c` (13 Okt 2026).
+
+Perlu: Node.js 22+, ffmpeg, Chrome/Chromium. Telemetri dimatikan melalui `.claude/settings.json` (`DO_NOT_TRACK=1`).
+
+| Skill | Untuk |
+| --- | --- |
+| `/hyperframes` | Pintu masuk — tak pasti, mula sini |
+| `/motion-graphics` | Tajuk animasi, stat naik, logo sting, lower-third |
+| `/faceless-explainer` | Video tips tanpa muka daripada skrip |
+| `/talking-head-recut` | Grafik atas video orang bercakap |
+| `/embedded-captions` | Caption bergaya (35 gaya) + transkripsi |
+| `/music-to-video` | Video / slideshow ikut beat lagu |
+| `/product-launch-video` | Video promo daripada URL / brief |
+| `/general-video` | Video berbilang babak bebas |
+| `/media-use` | Cari/jana muzik, SFX, suara, gambar |
+| `/slideshow` | Deck persembahan interaktif |
+| lain-lain | `hyperframes-core/-animation/-creative/-audio/-cli/-keyframes/-registry/-studio`, `figma`, `pr-to-video`, `remotion-to-hyperframes` — dipanggil oleh skill di atas |
+
+Kemas kini: `npx hyperframes skills update` (atau salin semula dari repo GitHub).
+
+Nota:
+- Suara AI / jana muzik / gambar perlukan API key (`HEYGEN_API_KEY`, `ELEVENLABS_API_KEY`, `GEMINI_API_KEY`) — pilihan, ada kos.
+- Sesi cloud Claude Code menyekat `cdn.jsdelivr.net`: `npm pack gsap` dan rujuk `gsap.min.js` secara lokal.
+- HyperFrames bina video daripada kod (teks, grafik, animasi, potongan rakaman) — bukan AI penjana footage. Untuk footage realistik guna Higgsfield.
+
+## C. Remotion — TIDAK dipasang
+
+Lesen Remotion: organisasi untung dengan **lebih 3 pekerja wajib beli Company License**. Minda Optima layak bayar, jadi tidak dipasang. Kalau syarikat beli lesen kemudian:
 ```bash
-# matikan telemetri (data guna dihantar ke HeyGen secara default)
-npx hyperframes telemetry disable
-
-# pasang skill (pilih Claude Code bila ditanya)
-npx skills add heygen-com/hyperframes
+npx skills add remotion-dev/skills
 ```
+HyperFrames buat hampir semua benda yang sama, percuma.
 
-Lepas tu dalam Claude Code: taip `/hyperframes` atau "buat video 9:16 untuk hook ni…".
+## D. Plugin directory (pilihan, tanya boss dulu)
 
-### Perkara yang perlu tahu
+**Marketing** & **Brand Voice** (Anthropic, disyorkan dalam pakej boss) · ManyMotions AI Video Editor · Video Cleanup · (video-shotcraft guna Remotion → isu lesen sama).
 
-- **Telemetri:** skill HyperFrames suruh Claude hantar "feedback report" ke HeyGen lepas setiap render. Jalankan `telemetry disable` di atas, atau set `DO_NOT_TRACK=1`.
-- **API key:** fungsi suara AI / jana gambar / muzik minta `HEYGEN_API_KEY`, `ELEVENLABS_API_KEY` atau `GEMINI_API_KEY`. Tak wajib — tanpa key, guna rakaman & muzik sendiri.
-- **Sesi cloud Claude Code:** rangkaian sekat `cdn.jsdelivr.net`, jadi animasi GSAP gagal load. Penyelesaian: `npm pack gsap` dan rujuk `gsap.min.js` secara lokal dalam `index.html`.
-- **Bukan AI video generator:** HyperFrames bina video daripada kod (teks, grafik, animasi, potongan rakaman). Untuk footage realistik guna Higgsfield (dah connect).
-- **PDPA & prinsip** dalam `video-editing` tetap terpakai — muka anak perlu kebenaran, jangan janji tempoh hasil bacaan.
+## Peraturan untuk SEMUA skill
+
+PDPA (muka/nama anak perlukan kebenaran bertulis) · jangan janji hasil bacaan dalam tempoh tertentu · testimoni mesti benar · Minda Optima bukan taska · jangan reka harga/tarikh/angka.

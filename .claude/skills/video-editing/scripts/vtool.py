@@ -431,6 +431,37 @@ def cmd_thumb(a):
     print(f"SIAP: {a.output}")
 
 
+def cmd_clips(a):
+    """Potong satu video panjang jadi banyak klip pendek (repurpose) sekali gus.
+    Fail senarai: satu klip sebaris -> `MULA-TAMAT nama_klip`, cth `1:05-1:40 tip-suku-kata`."""
+    need_ffmpeg()
+    w, h = RATIOS[a.ratio]
+    info = probe(a.input)
+    os.makedirs(a.outdir, exist_ok=True)
+    made = 0
+    with open(a.list, encoding="utf-8") as fh:
+        for n, raw in enumerate(fh, 1):
+            raw = raw.split("#")[0].strip()
+            if not raw:
+                continue
+            m = re.match(r"^([\d:.]+)\s*-\s*([\d:.]+)\s*(.*)$", raw)
+            if not m:
+                die(f"Baris {n} tak faham: '{raw}'. Format: 1:05-1:40 nama")
+            s, e = tsec(m[1]), tsec(m[2])
+            if e <= s:
+                die(f"Baris {n}: masa tamat mesti selepas masa mula.")
+            name = re.sub(r"[^\w-]+", "-", m[3].strip()).strip("-") or f"klip{n:02d}"
+            out = os.path.join(a.outdir, f"{made + 1:02d}_{name}.mp4")
+            args = ["-ss", str(s), "-t", str(e - s), "-i", a.input,
+                    "-filter_complex", frame_filter(w, h, a.mode), "-map", "[v]"]
+            if info["has_audio"]:
+                args += ["-map", "0:a:0", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11"] + AENC
+            run(args + ["-r", "30"] + VENC + TAIL + [out])
+            made += 1
+            done(out)
+    print(f"Jumlah: {made} klip dalam {a.outdir}")
+
+
 # ---------------------------------------------------------------- CLI
 
 def main():
@@ -501,6 +532,13 @@ def main():
     s.add_argument("--min-silence", type=float, default=0.6, help="jeda minimum (saat) untuk dibuang")
     s.add_argument("--pad", type=float, default=0.12, help="ruang nafas kekal (saat)")
     s.set_defaults(fn=cmd_jumpcut)
+
+    s = sp.add_parser("clips", help="potong video panjang jadi banyak reels (ikut senarai)")
+    s.add_argument("input"); s.add_argument("outdir")
+    s.add_argument("--list", required=True, help="fail .txt: `1:05-1:40 nama` satu sebaris")
+    s.add_argument("--ratio", choices=RATIOS, default="9:16")
+    s.add_argument("--mode", choices=["blur", "crop", "pad"], default="crop")
+    s.set_defaults(fn=cmd_clips)
 
     s = sp.add_parser("speed", help="laju / perlahan (0.5–4)")
     s.add_argument("input"); s.add_argument("output")

@@ -14,6 +14,8 @@ Skill ini ada **dua mod**. Kenal pasti dulu mana satu yang staf perlukan — sel
 | --- | --- | --- |
 | **A. Rancang** | Belum ada video, atau nak idea / skrip / brief untuk editor | Skrip, shot list, teks atas skrin, caption, brief CapCut |
 | **B. Edit** | Staf beri fail video | Fail video siap edit (.mp4) + nota apa yang diubah |
+| **C. Repurpose** | Ada video panjang (live, webinar, wawancara guru/ibu bapa) | 5–10 reels pendek, setiap satu dengan hook + caption |
+| **D. Grafik bergerak** | Nak tajuk animasi, kinetic text, video tanpa muka, video ikut beat lagu | Rujuk skill HyperFrames (lihat bawah) |
 
 ---
 
@@ -91,12 +93,16 @@ Urutan penting — subtitle dan teks mesti dibuat **selepas** saiz bingkai mukta
 | 9 | Logo | `logo in.mp4 out.mp4 --logo logo.png --pos ka` |
 | 10 | Compress (WhatsApp) | `compress in.mp4 out.mp4 --target-mb 15 --max-height 1280` |
 | 11 | Thumbnail | `thumb in.mp4 cover.jpg --at 2.5` |
+| 12 | Banyak reels dari video panjang | `clips panjang.mp4 reels/ --list clips.txt` (lihat Mod C) |
 
 Nota penggunaan:
 - **reframe `--mode`**: `blur` (default) untuk video landskap → 9:16 tanpa potong orang; `crop` bila subjek di tengah dan nak penuh skrin; `pad` untuk jalur hitam.
 - **jumpcut** sesuai untuk guru/staf bercakap depan kamera. Jangan guna pada video kelas sebenar — jeda anak berfikir sebelum membaca itu sebahagian cerita.
 - **audio**: muzik automatik jadi perlahan bila ada suara (ducking), dan bunyi diseimbangkan ke −14 LUFS (standard TikTok/IG/YouTube). Tanpa `--music` ia cuma seimbangkan bunyi.
-- **srt**: tiada speech-to-text di sini. Kalau staf ada skrip, `srt` agih masa ikut panjang ayat — semak dan laraskan masa dalam fail .srt jika perlu. Kalau tiada skrip, cadang guna *Auto captions* CapCut, export .srt, dan kau betulkan ejaan BM sebelum bakar.
+- **Subtitle automatik (transkrip suara)**: kalau Node.js ada, guna transkripsi HyperFrames (jalan dalam komputer, percuma):
+  `npx hyperframes transcribe in.mp4 --engine whisper --model large-v3 --language ms --to srt -o cap.srt`
+  (model `.en` hanya untuk English — BM perlukan `large-v3`; muat turun kali pertama besar). Selepas itu **semak ejaan BM & nama** dalam `cap.srt` sebelum `subs`.
+- **srt** (tanpa transkripsi): Kalau staf ada skrip, `srt` agih masa ikut panjang ayat — semak dan laraskan masa dalam fail .srt jika perlu. Kalau tiada skrip, cadang guna *Auto captions* CapCut, export .srt, dan kau betulkan ejaan BM sebelum bakar.
 - **text**: guna `\n` untuk baris baru; maksimum 2 baris. Letak dalam zon selamat (lihat rujukan) — `--pos atas` atau `tengah`, elak paling bawah (ditutup butang app).
 - Setiap langkah hasilkan fail baru. Namakan jelas (`01_trim.mp4`, `02_916.mp4`…) supaya mudah undur.
 
@@ -109,6 +115,41 @@ Beri fail akhir + nota ringkas:
 2. **Apa yang aku andaikan** & apa staf perlu semak (`[ISI]`, ejaan nama, kebenaran muka anak)
 3. **Caption post** sedia salin + masa terbaik post kalau ditanya
 4. **Cadangan seterusnya** — satu benda yang akan buat video ni lebih kuat (biasanya hook)
+
+---
+
+## Mod C — Repurpose video panjang jadi banyak reels
+
+Satu video 30–60 minit (live FB, webinar ibu bapa, wawancara guru) = bahan untuk sebulan.
+
+1. **Dapatkan transkrip** (`npx hyperframes transcribe … --to srt`) atau minta staf beri masa-masa menarik.
+2. **Pilih 5–10 detik emas** — bahagian 15–45 saat yang boleh berdiri sendiri: satu tip, satu cerita, satu ayat kuat ibu bapa. Utamakan bahagian yang *bermula dengan masalah* (itu hook semula jadi). Elak bahagian yang perlu konteks sebelumnya.
+3. **Tulis fail senarai** (`clips.txt`), satu klip sebaris:
+   ```
+   2:15-2:52 anak-tekan-buku
+   11:03-11:40 silap-ibu-bapa-di-rumah
+   ```
+4. **Potong semua sekali gus**: `python3 scripts/vtool.py clips panjang.mp4 reels/ --list clips.txt --ratio 9:16 --mode crop`
+   (bunyi setiap klip diseimbangkan automatik). Guna `--mode blur` kalau ada lebih daripada satu orang dalam bingkai.
+5. Untuk setiap klip: teks hook 0–3s (`text`), subtitle (`subs`), dan caption post.
+6. **Serah dalam jadual**: fail · hook · caption · cadangan hari post (sebar 2–3 seminggu, jangan lambak sehari).
+
+---
+
+## Mod D — Grafik bergerak & video dari kod (HyperFrames)
+
+Kalau repo ini dibuka dalam Claude Code, skill HyperFrames dipasang sekali. Guna bila:
+
+| Nak buat | Skill |
+| --- | --- |
+| Tajuk animasi, stat naik, logo sting, lower-third | `/motion-graphics` |
+| Video tips tanpa muka (teks + grafik) daripada skrip | `/faceless-explainer` |
+| Grafik/tajuk atas video guru bercakap | `/talking-head-recut` |
+| Caption bergaya (35 gaya) atas video bercakap | `/embedded-captions` |
+| Video/slideshow ikut beat lagu | `/music-to-video` |
+| Lain-lain / tak pasti | `/hyperframes` |
+
+Peraturan Minda Optima (PDPA, tiada janji tempoh, testimoni benar) **tetap terpakai** walaupun guna skill HyperFrames. Telemetri dimatikan melalui `.claude/settings.json` (`DO_NOT_TRACK=1`). Kalau animasi GSAP gagal load dari CDN, `npm pack gsap` dan rujuk fail `gsap.min.js` secara lokal.
 
 ---
 
