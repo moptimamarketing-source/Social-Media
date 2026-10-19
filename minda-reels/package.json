@@ -1,0 +1,30 @@
+{
+  "name": "minda-reels",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Re-edit of Minda Optima 'Anak Suka Nego' reel with Remotion",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "clean": "python3 -I tools/clean_captions.py public/source.mp4 public/clean.mp4",
+    "audio": "ffmpeg -v error -y -i public/source.mp4 -vn -af loudnorm=I=-14:TP=-1.5:LRA=11 -ar 48000 -ac 2 public/dialogue.wav",
+    "sfx": "python3 -I tools/make_sfx.py public/sfx",
+    "prepare-assets": "npm run clean && npm run audio && npm run sfx",
+    "preview": "remotion render src/index.ts AnakSukaNego out/preview.mp4 --scale=0.5 --crf=26",
+    "render": "remotion render src/index.ts AnakSukaNego out/final_raw.mp4 --codec=h264 --crf=16 && bash tools/finalize.sh out/final_raw.mp4 out/AnakSukaNego_final.mp4",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/baloo-2": "5.2.5",
+    "@fontsource/poppins": "5.2.6",
+    "@fontsource/caveat": "5.2.6",
+    "@fontsource/noto-color-emoji": "5.2.6",
+    "@remotion/cli": "4.0.536",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.536"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}
